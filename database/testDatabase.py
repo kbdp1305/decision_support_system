@@ -6,11 +6,12 @@ from model.profile_matching import profile_matching
 # a.delete()
 # a=generate_dataset()
 
-s=profile_matching([5,5,5],[1,4],[2,2,2,5,5],[3,3,3])
+s=profile_matching([1,1,1],[1,1],[1,1,1,1,1],[1,1,1])
 a=s.difference_of_criterion()
 # print(a[0])
 a=s.weighting_matrix()
 # print(a[0])
-a=s.compute_final_criterion()
-
+# a=s.compute_final_criterion()
+a=s.ranking()
+print(a)
 # a=s.normalize_dataset()
