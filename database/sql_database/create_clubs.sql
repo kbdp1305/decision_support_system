@@ -1,12 +1,12 @@
 -- Create Clubs Table
 CREATE TABLE Clubs (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     club_name VARCHAR(255) UNIQUE
 );
 
 -- Create Followers Table
 CREATE TABLE Followers (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     club_id INT,
     instagram_followers FLOAT,
     twitter_followers FLOAT,
@@ -16,7 +16,7 @@ CREATE TABLE Followers (
 
 -- Create ClubFinancial Table
 CREATE TABLE ClubFinancial (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     club_id INT,
     market_value DECIMAL(10, 2),
     income DECIMAL(10, 2),
@@ -26,7 +26,7 @@ CREATE TABLE ClubFinancial (
 
 -- Create ClubHistory Table
 CREATE TABLE ClubHistory (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     club_id INT,
     trophies_won INT,
     manager_count INT,
@@ -35,7 +35,7 @@ CREATE TABLE ClubHistory (
 
 -- Create SeasonStats Table
 CREATE TABLE SeasonStats (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     club_id INT,
     goals_scored INT,
     goals_against INT,

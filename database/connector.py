@@ -17,7 +17,7 @@ import mysql.connector
 db=mysql.connector.connect(
     host="localhost",
     user="root",
-    password=""
+    password="S0kes0kk1pre1"
 )
 
 
@@ -33,17 +33,17 @@ class connectDatabase() :
         return connection
     def makeCursor(self):
         return self.openConnection().cursor(),self.db
-    def query(self):
-        cursor=self.makeCursor()
-        cursor.execute("USE TimSepakBola")
-        cursor.execute("SELECT * FROM Data_tim")
-
-        # Fetch the first row
-        row = cursor.fetchone()
-
-        # Loop through all rows and print them
-        while row is not None:
-            print(row)
-            row = cursor.fetchone()
-        cursor.close()
-        self.db.close()
+    # def query(self):
+    #     cursor=self.makeCursor()
+    #     cursor.execute("USE footballteams")
+    #     cursor.execute("SELECT * FROM Data_tim")
+    #
+    #     # Fetch the first row
+    #     row = cursor.fetchone()
+    #
+    #     # Loop through all rows and print them
+    #     while row is not None:
+    #         print(row)
+    #         row = cursor.fetchone()
+    #     cursor.close()
+    #     self.db.close()
