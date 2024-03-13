@@ -124,6 +124,24 @@ class profile_matching() :
         for criterion in range(ncf.shape[0]) :
             for alternatif in range(ncf.shape[1]) :
                 final_skor[criterion][alternatif] = ncf[criterion][alternatif]*0.6 + nsf[criterion][alternatif]*0.4
-        print(final_skor)
+        return final_skor
+    def ranking(self):
+        final_skor=self.compute_final_criterion()
+        final_skors = np.array([0] * 20, dtype=float)
+        for idx, criterion in enumerate(final_skor) :
+            # print(criterion)
 
+            for alternatif in range(len(criterion)) :
+                temp = 0
+                if idx==0 :
+                    temp+=criterion[alternatif]*0.3
+                elif idx == 1 :
+                    temp+=criterion[alternatif]*0.3
+                elif idx == 2 :
+                    temp+=criterion[alternatif]*0.3
+                elif idx == 3 :
+                    temp+=criterion[alternatif]*0.1
+                final_skors[alternatif]+=temp
+        result= dict(zip(self.dataset['club_id'], zip(self.dataset['club_name'], final_skors)))
+        return dict(sorted(result.items(), key=lambda item: item[1][1],reverse=True))
 
