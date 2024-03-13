@@ -3,7 +3,7 @@ import mysql.connector
 # db=mysql.connector.connect(
 #     host="localhost",
 #     user="root",
-#     password="S0kes0kk1pre1"
+#     password=""
 # )
 # cursor=db.cursor()
 # cursor.execute("USE TimSepakBola")
@@ -17,7 +17,7 @@ import mysql.connector
 db=mysql.connector.connect(
     host="localhost",
     user="root",
-    password="S0kes0kk1pre1"
+    password=""
 )
 
 
@@ -25,7 +25,7 @@ class connectDatabase() :
     def __init__(self):
         self.host="localhost"
         self.user="user"
-        self.password="S0kes0kk1pre1"
+        self.password=""
         self.db=None
     def openConnection(self):
         connection = db
