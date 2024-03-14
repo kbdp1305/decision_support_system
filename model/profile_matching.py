@@ -124,7 +124,7 @@ class profile_matching() :
         for criterion in range(ncf.shape[0]) :
             for alternatif in range(ncf.shape[1]) :
                 final_skor[criterion][alternatif] = ncf[criterion][alternatif]*0.6 + nsf[criterion][alternatif]*0.4
-        return final_skor
+        return final_skor,self.dataset
     def ranking(self):
         final_skor=self.compute_final_criterion()
         final_skors = np.array([0] * 20, dtype=float)
