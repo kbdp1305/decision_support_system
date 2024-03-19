@@ -1,9 +1,9 @@
 from model.profile_matching import profile_matching
 import numpy as np
-
+import pandas as pd
 class ProfileTopsis() :
-    def __init__(self):
-        self.profile_matching=profile_matching([5,5,4],[5,5],[4,4,4,5,5],[4,4,4])
+    def __init__(self,criterion_followers, criterion_clubhistory, criterion_seasonstats, crterion_clubfinancial):
+        self.profile_matching=profile_matching(criterion_followers,criterion_clubhistory,criterion_seasonstats,crterion_clubfinancial)
         self.criterion,self.dataset=self.profile_matching.compute_final_criterion()
     def normalize_topsis(self):
         squared_criterion=self.criterion.copy()
@@ -68,7 +68,13 @@ class ProfileTopsis() :
     def ranking(self):
         preferences=self.calculate_preferences()
         result=dict(zip(self.dataset['club_id'], zip(self.dataset['club_name'], preferences)))
-        return dict(sorted(result.items(), key=lambda item: item[1][1],reverse=True))
+        data=dict(sorted(result.items(), key=lambda item: item[1][1],reverse=True))
+        team_names = [value[0] for value in data.values()]
+        scores = [value[1] for value in data.values()]
+
+        # Create DataFrame
+        df = pd.DataFrame({'Team': team_names, 'Score': scores})
+        return df
 
 
 

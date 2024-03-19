@@ -73,8 +73,8 @@ class Query:
         finally:
             if self.cursor:
                 self.cursor.close()
-            if self.db:
-                self.db.close()
+            # if self.db:
+            #     self.db.close()
     def update(self,new_name):
         try:
             self.cursor, self.db = self.database.makeCursor()
@@ -95,11 +95,11 @@ class Query:
         except Exception as e:
             print("Error:", e)
             self.db.rollback()
-        finally:
-            if self.cursor:
-                self.cursor.close()
-            if self.db:
-                self.db.close()
+        # finally:
+        #     if self.cursor:
+        #         self.cursor.close()
+        #     if self.db:
+        #         self.db.close()
     def delete(self):
         try:
             self.cursor, self.db = self.database.makeCursor()
@@ -130,8 +130,8 @@ class Query:
         except Exception as e:
             print("Error:", e)
             self.db.rollback()
-        finally:
-            if self.cursor:
-                self.cursor.close()
-            if self.db:
-                self.db.close()
+        # finally:
+        #     if self.cursor:
+        #         self.cursor.close()
+        #     if self.db:
+        #         self.db.close()

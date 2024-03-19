@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net" modified="2024-03-18T15:41:10.897Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="tdWGl3tijUxAYVLjy5c9" version="24.0.7" type="device">
+  <diagram name="Halaman-1" id="jzSCGzB7xTGCqZVyPvuE">
+    <mxGraphModel dx="2549" dy="954" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-32" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="170" width="290" height="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-16" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="170" width="320" height="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="03y6v-tJVYBPgYdbCMEv-3" target="03y6v-tJVYBPgYdbCMEv-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-3" value="Input Kriteria&amp;nbsp;&lt;div&gt;User&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="70" y="250" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="03y6v-tJVYBPgYdbCMEv-4" target="03y6v-tJVYBPgYdbCMEv-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-4" value="Perhitungan GAP" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="570" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="03y6v-tJVYBPgYdbCMEv-6" target="03y6v-tJVYBPgYdbCMEv-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-6" value="Weighting" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="720" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="03y6v-tJVYBPgYdbCMEv-8" target="03y6v-tJVYBPgYdbCMEv-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-8" value="Penghitungan Core Factor dan Secondary Factor per subkriteria" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="890" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-29" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;" edge="1" parent="1" target="03y6v-tJVYBPgYdbCMEv-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="1115.5" as="sourcePoint" />
+            <mxPoint x="480" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="1116" />
+              <mxPoint x="340" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-10" value="Total Value tiap Kriteria" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1060" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-17" value="&lt;b&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;Profile Matching&lt;/font&gt;&lt;/b&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="180" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="03y6v-tJVYBPgYdbCMEv-18" target="03y6v-tJVYBPgYdbCMEv-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-18" value="Normalisasi Nilai Final Value Kriteria" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="230" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="03y6v-tJVYBPgYdbCMEv-19" target="03y6v-tJVYBPgYdbCMEv-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-19" value="Weighting" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="400" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="03y6v-tJVYBPgYdbCMEv-21" target="03y6v-tJVYBPgYdbCMEv-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-21" value="Menghitung nilai Positife Ideal dan Negative Ideal (Dplus, Dminus)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="570" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="03y6v-tJVYBPgYdbCMEv-23" target="03y6v-tJVYBPgYdbCMEv-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-23" value="Menghitung Preferences" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="740" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-25" value="Perankingan" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="890" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-33" value="&lt;b&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;Topsis&lt;/font&gt;&lt;/b&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="170" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="03y6v-tJVYBPgYdbCMEv-36" target="03y6v-tJVYBPgYdbCMEv-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03y6v-tJVYBPgYdbCMEv-36" value="Min Max Normalization" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="390" width="100" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
