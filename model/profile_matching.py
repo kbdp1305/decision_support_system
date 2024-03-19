@@ -2,10 +2,12 @@ import pandas as pd
 import numpy as np
 from database.dataset_generate import generate_dataset
 from sklearn.preprocessing import MinMaxScaler
-
+from database.connector import connectDatabase
 class profile_matching() :
     def __init__(self,criterion_followers, criterion_clubhistory, criterion_seasonstats, crterion_clubfinancial):
-        self.dataset=generate_dataset()
+        connection=connectDatabase()
+        self.cursor,self.db=connection.makeCursor()
+        self.dataset,self._=generate_dataset(self.cursor,self.db)
         self.list_of_teams=dict(zip(self.dataset['club_id'], self.dataset['club_name']))
         self.criterion_followers=criterion_followers
         self.criterion_clubhistory=criterion_clubhistory
@@ -85,8 +87,8 @@ class profile_matching() :
         nsf_seasonstats=[]
         criterions, list_of_criterion=self.weighting_matrix()
         tampungan=[]
-        ncf_t = np.array([[0]*20]*4,dtype=float)
-        nsf_t = np.array([[0]*20]*4,dtype=float)
+        ncf_t = np.array([[0]*len(self.list_of_teams)]*4,dtype=float)
+        nsf_t = np.array([[0]*len(self.list_of_teams)]*4,dtype=float)
         for idx, criterion in enumerate(criterions):
 
             for alternatif in range(criterion.shape[0]):
@@ -120,25 +122,25 @@ class profile_matching() :
 
     def compute_final_criterion(self):
         ncf,nsf=self.NCF_NSF()
-        final_skor = np.array([[0] * 20] * 4, dtype=float)
+        final_skor = np.array([[0] * len(self.list_of_teams)] * 4, dtype=float)
         for criterion in range(ncf.shape[0]) :
             for alternatif in range(ncf.shape[1]) :
                 final_skor[criterion][alternatif] = ncf[criterion][alternatif]*0.6 + nsf[criterion][alternatif]*0.4
         return final_skor,self.dataset
     def ranking(self):
-        final_skor=self.compute_final_criterion()
-        final_skors = np.array([0] * 20, dtype=float)
+        final_skor,_=self.compute_final_criterion()
+        final_skors = np.array([0] * len(self.list_of_teams), dtype=float)
         for idx, criterion in enumerate(final_skor) :
             # print(criterion)
 
             for alternatif in range(len(criterion)) :
                 temp = 0
                 if idx==0 :
-                    temp+=criterion[alternatif]*0.3
+                    temp+=criterion[alternatif]*0.7
                 elif idx == 1 :
-                    temp+=criterion[alternatif]*0.3
+                    temp+=criterion[alternatif]*0.1
                 elif idx == 2 :
-                    temp+=criterion[alternatif]*0.3
+                    temp+=criterion[alternatif]*0.1
                 elif idx == 3 :
                     temp+=criterion[alternatif]*0.1
                 final_skors[alternatif]+=temp

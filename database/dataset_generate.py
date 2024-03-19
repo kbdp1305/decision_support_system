@@ -4,9 +4,8 @@ import csv
 
 # Open the CSV file
 import pandas as pd
-def generate_dataset() :
-    database = connectDatabase()
-    cursor, db = database.makeCursor()
+def generate_dataset(cursor,db) :
+    cursor, db = cursor,db
     cursor.execute("USE footballteams")
 
     sql_query = """
@@ -57,6 +56,6 @@ def generate_dataset() :
     # Create a DataFrame using pandas
     df = pd.DataFrame(rows, columns=column_names)
     # Close the cursor and database connection
-    cursor.close()
-    db.close()
-    return df
+    # cursor.close()
+    # db.close()
+    return df,db
