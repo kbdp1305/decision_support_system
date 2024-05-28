@@ -34,7 +34,7 @@ class profile_matching() :
     def normalize_dataset(self):
         data = self.dataset.drop(["club_id","club_name"], axis=1)
         listss=data.columns
-        scaler = MinMaxScaler(feature_range=(1,5))
+        scaler = MinMaxScaler(feature_range=(1,6))
         scaler.fit(data)
         scaled_data = scaler.transform(data)
         self.dataset[listss]=scaled_data
@@ -136,14 +136,20 @@ class profile_matching() :
             for alternatif in range(len(criterion)) :
                 temp = 0
                 if idx==0 :
-                    temp+=criterion[alternatif]*0.7
+                    temp+=criterion[alternatif]*0.3
                 elif idx == 1 :
-                    temp+=criterion[alternatif]*0.1
+                    temp+=criterion[alternatif]*0.3
                 elif idx == 2 :
-                    temp+=criterion[alternatif]*0.1
+                    temp+=criterion[alternatif]*0.3
                 elif idx == 3 :
                     temp+=criterion[alternatif]*0.1
                 final_skors[alternatif]+=temp
         result= dict(zip(self.dataset['club_id'], zip(self.dataset['club_name'], final_skors)))
-        return dict(sorted(result.items(), key=lambda item: item[1][1],reverse=True))
+        data = dict(sorted(result.items(), key=lambda item: item[1][1], reverse=True))
+        team_names = [value[0] for value in data.values()]
+        scores = [value[1] for value in data.values()]
+
+        # Create DataFrame
+        df = pd.DataFrame({'Team': team_names, 'Score': scores})
+        return df
 
