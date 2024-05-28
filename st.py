@@ -18,20 +18,20 @@ cursor,db=database.makeCursor()
 def Suggest_Club() :
         st.title("CLUB SUGGESTION GENERATOR")
         input_values=[]
-        market_value = st.number_input("Market Value", min_value=1, max_value=5)
-        income = st.number_input("Income", min_value=1, max_value=5)
-        expenditure = st.number_input("Expenditure", min_value=1, max_value=5)
-        instagram_followers = st.number_input("Instagram Followers", min_value=1, max_value=5)
-        twitter_followers = st.number_input("Twitter Followers", min_value=1, max_value=5)
-        average_attendance = st.number_input("Average Attendance", min_value=1, max_value=5)
-        trophies_won = st.number_input("Trophies Won", min_value=1, max_value=5)
-        manager_count = st.number_input("Manager Count", min_value=1, max_value=5)
-        goals_against = st.number_input("Goals Against", min_value=1, max_value=5)
-        goals_scored = st.number_input("Goals Scored", min_value=1, max_value=5)
-        matches_won = st.number_input("Matches Won", min_value=1, max_value=5)
-        matches_lost = st.number_input("Matches Lost", min_value=1, max_value=5)
-        matches_drawn = st.number_input("Matches Drawn", min_value=1, max_value=5)
-        if st.button("suggest club"):
+        market_value = st.number_input("Market Value", min_value=1, max_value=6)
+        income = st.number_input("Income", min_value=1, max_value=6)
+        expenditure = st.number_input("Expenditure", min_value=1, max_value=6)
+        instagram_followers = st.number_input("Instagram Followers", min_value=1, max_value=6)
+        twitter_followers = st.number_input("Twitter Followers", min_value=1, max_value=6)
+        average_attendance = st.number_input("Average Attendance", min_value=1, max_value=6)
+        trophies_won = st.number_input("Trophies Won", min_value=1, max_value=6)
+        manager_count = st.number_input("Manager Count", min_value=1, max_value=6)
+        goals_against = st.number_input("Goals Against", min_value=1, max_value=6)
+        goals_scored = st.number_input("Goals Scored", min_value=1, max_value=6)
+        matches_won = st.number_input("Matches Won", min_value=1, max_value=6)
+        matches_lost = st.number_input("Matches Lost", min_value=1, max_value=6)
+        matches_drawn = st.number_input("Matches Drawn", min_value=1, max_value=6)
+        if st.button("Profile Topsis"):
             input_values.append(market_value)
             input_values.append(income)
             input_values.append(expenditure)
@@ -48,6 +48,27 @@ def Suggest_Club() :
             market_value, income, expenditure, instagram_followers, twitter_followers, average_attendance, trophies_won, manager_count, goals_against, goals_scored, matches_won, matches_lost, matches_drawn = input_values
             pm=ProfileTopsis([instagram_followers,twitter_followers,average_attendance],[trophies_won,manager_count],[goals_scored,goals_against,matches_won,matches_lost,matches_drawn],[market_value,income,expenditure])
             s=pm.ranking()
+            st.write(s)
+        if st.button('Profile Matching') :
+            input_values.append(market_value)
+            input_values.append(income)
+            input_values.append(expenditure)
+            input_values.append(instagram_followers)
+            input_values.append(twitter_followers)
+            input_values.append(average_attendance)
+            input_values.append(trophies_won)
+            input_values.append(manager_count)
+            input_values.append(goals_against)
+            input_values.append(goals_scored)
+            input_values.append(matches_won)
+            input_values.append(matches_lost)
+            input_values.append(matches_drawn)
+            market_value, income, expenditure, instagram_followers, twitter_followers, average_attendance, trophies_won, manager_count, goals_against, goals_scored, matches_won, matches_lost, matches_drawn = input_values
+            pm = profile_matching([instagram_followers, twitter_followers, average_attendance],
+                               [trophies_won, manager_count],
+                               [goals_scored, goals_against, matches_won, matches_lost, matches_drawn],
+                               [market_value, income, expenditure])
+            s = pm.ranking()
             st.write(s)
 
 
